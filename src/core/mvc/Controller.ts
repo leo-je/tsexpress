@@ -1,11 +1,22 @@
 
 
-export  function Controller(params:String) {
-    return (tagert:any) => {
-        console.log(params)
+export  function Controller(params:String):ClassDecorator {
+    return (controller:Function|any) => {
+
         
-        tagert._path = params
-        console.log(tagert);
+    }
+}
+
+export  function Get(params:String) :MethodDecorator{
+    return (controller:Function|any,propertyKey:string|symbol,value) => {
+
         
+    }
+}
+
+
+export function param(params:String):ParameterDecorator{
+    return (controller:Function|any,propertyKey:string|symbol,index:number) => {
+
     }
 }
